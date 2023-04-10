@@ -19,5 +19,6 @@ type SensorData {
 }
 
 type Query {
-    sensorDatas: [SensorData]
+    allSensorDatas: [SensorData]
+    latestSensorData: [SensorData]
 }

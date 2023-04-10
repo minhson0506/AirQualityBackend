@@ -1,7 +1,7 @@
 import mongoose, {Schema} from "mongoose";
 import {SensorData} from "../../interfaces/SensorData";
 
-const dataSchema = new Schema<SensorData>({
+const sensorDataSchema = new Schema<SensorData>({
     deviceId: {
         type: String,
         required: true
@@ -60,4 +60,4 @@ const dataSchema = new Schema<SensorData>({
     }
 });
 
-export default mongoose.model<SensorData>('SensorData', dataSchema);
+export default mongoose.model<SensorData>('SensorData', sensorDataSchema);
