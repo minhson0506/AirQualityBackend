@@ -15,4 +15,8 @@ interface SensorData extends Document {
     noise: number;
 }
 
-export {SensorData}
+interface DeviceData extends Document{
+    deviceId: string;
+    deviceName: string;
+}
+export {SensorData, DeviceData}

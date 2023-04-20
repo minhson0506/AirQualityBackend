@@ -18,7 +18,13 @@ type SensorData {
     noise: Float!
 }
 
+type Device {
+    deviceId: String!
+    deviceName: String!
+}
+
 type Query {
+    allDevices: [Device]
     allSensorDatas: [SensorData]
     latestSensorData: [SensorData]
 }
