@@ -2,8 +2,7 @@ scalar DateTime
 
 type SensorData {
     id: ID!
-    deviceId: String!
-    deviceName: String!
+    device: Device!
     time: DateTime!
     pm10: Float!
     pm2_5: Float!
@@ -18,13 +17,7 @@ type SensorData {
     noise: Float!
 }
 
-type Device {
-    deviceId: String!
-    deviceName: String!
-}
-
 type Query {
-    allDevices: [Device]
-    allSensorDatas: [SensorData]
-    latestSensorData: [SensorData]
+    allSensorDatas(deviceName: String!): [SensorData]
+    latestSensorData(deviceName: String!): [SensorData]
 }

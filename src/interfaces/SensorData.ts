@@ -1,6 +1,8 @@
+import {Types} from "mongoose";
+import {Device} from "./Device";
+
 interface SensorData extends Document {
-    deviceId: string;
-    deviceName: string;
+    device: Types.ObjectId | Device;
     time: Date;
     pm10: number;
     pm2_5: number;
@@ -15,8 +17,4 @@ interface SensorData extends Document {
     noise: number;
 }
 
-interface DeviceData extends Document{
-    deviceId: string;
-    deviceName: string;
-}
-export {SensorData, DeviceData}
+export {SensorData}

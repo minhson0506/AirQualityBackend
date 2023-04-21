@@ -2,12 +2,9 @@ import mongoose, {Schema} from "mongoose";
 import {SensorData} from "../../interfaces/SensorData";
 
 const sensorDataSchema = new Schema<SensorData>({
-    deviceId: {
-        type: String,
-        required: true
-    },
-    deviceName: {
-        type: String,
+    device: {
+        type: Schema.Types.ObjectId,
+        ref: 'Device',
         required: true
     },
     time: {

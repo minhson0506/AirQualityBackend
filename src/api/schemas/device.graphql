@@ -1,0 +1,14 @@
+type Device {
+    deviceId: String!
+    deviceName: String!
+}
+
+type Query {
+    allDevices: [Device]
+}
+
+type Mutation {
+    addDevice(deviceId: String!, deviceName: String!): Device
+    updateDevice(deviceId: String!, deviceName: String!): Device
+    deleteDevice(deviceId: String!): Device
+}
