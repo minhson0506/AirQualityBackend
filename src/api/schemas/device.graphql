@@ -1,4 +1,5 @@
 type Device {
+    id: ID!
     deviceId: String!
     deviceName: String!
 }
