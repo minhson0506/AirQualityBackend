@@ -10,6 +10,6 @@ type Query {
 
 type Mutation {
     addDevice(deviceId: String!, deviceName: String!): Device
-    updateDevice(deviceId: String!, deviceName: String!): Device
+    updateDevice(id: ID!, deviceId: String!, deviceName: String!): Device
     deleteDevice(deviceId: String!): Device
 }

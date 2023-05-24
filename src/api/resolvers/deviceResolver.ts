@@ -22,11 +22,11 @@ export default {
         },
         // update device
         updateDevice: async (parent: unknown, args: Device) => {
-            return await deviceModel.findByIdAndUpdate(args._id, args, {new: true});
+            return await deviceModel.findByIdAndUpdate(args.id, args, {new: true});
         },
         // delete device
-        deleteDevice: async (parent: unknown, args: {_id: string}) => {
-            return await deviceModel.findByIdAndDelete(args._id);
+        deleteDevice: async (parent: unknown, args: {id: string}) => {
+            return await deviceModel.findByIdAndDelete(args.id);
         },
     },
 };
