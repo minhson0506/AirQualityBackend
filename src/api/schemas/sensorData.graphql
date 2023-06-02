@@ -1,0 +1,29 @@
+scalar DateTime
+
+type SensorData {
+    id: ID!
+    device: Device!
+    time: DateTime!
+    pm10: Float!
+    pm2_5: Float!
+    pm1: Float!
+    pm4: Float!
+    lux: Float!
+    temp: Float!
+    hum: Float!
+    pres: Float!
+    alt: Float!
+    co2: Float!
+    noise: Float!
+}
+
+type Query {
+    allSensorDatas(deviceName: String!): [SensorData]
+    latestSensorData(deviceName: String!): [SensorData]
+    sensorDataInDate(deviceName: String!, date: String!): [SensorData]
+}
+
+type Mutation {
+    addSensorData(deviceName: String!, time: String!, pm10: Float!, pm2_5: Float!, pm1: Float!, pm4: Float!, lux: Float!, temp: Float!, hum: Float!, pres: Float!, alt: Float!, co2: Float!, noise: Float!): SensorData
+    deleteSensorData(id: ID!): SensorData
+}

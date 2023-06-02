@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "sourceMap": true,
+        "target": "es6",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "lib": ["es2015"],
+    "include": ["./*.js", "src/**/*.ts"]
+}
